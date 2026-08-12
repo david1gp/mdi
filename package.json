@@ -1,0 +1,68 @@
+{
+  "name": "@adaptive-ds/mdi",
+  "version": "0.1.0",
+  "description": "Material Design Icons as one ESM file per path string. Import only the icons you use — no barrel, no CJS, no extra runtime deps.",
+  "keywords": [
+    "mdi",
+    "material-design-icons",
+    "icons",
+    "svg",
+    "path",
+    "esm",
+    "typescript",
+    "pictogrammers",
+    "tree-shake",
+    "adaptive-ds"
+  ],
+  "homepage": "https://github.com/david1gp/mdi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david1gp/mdi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/david1gp/mdi/issues"
+  },
+  "author": "David Siewert",
+  "license": "Apache-2.0",
+  "type": "module",
+  "private": false,
+  "sideEffects": false,
+  "scripts": {
+    "dev": "bun run ops/iconsGenerate.ts --watch",
+    "generate": "bun run ops/iconsGenerate.ts",
+    "test": "bun test",
+    "test:w": "bun test --watch",
+    "build": "rm -rf ./dist && bun run generate && tsc -p ./tsconfig.lib.json",
+    "tsc": "tsc --noEmit",
+    "release": "bash ./ops/release.sh",
+    "deploy": "bash ./ops/deploy.sh",
+    "format": "biome format --write ops test package.json tsconfig.json tsconfig.lib.json biome.json README.md",
+    "update": "bun update",
+    "update:commit": "bun update && git add package.json && bun run tsc && git commit -m \"chore(deps): update dependencies\" && git push",
+    "clean": "rm -rf ./dist",
+    "reset": "rm -rf ./node_modules"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.2",
+    "@types/bun": "^1.3.14",
+    "typescript": "^6.0.3"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 120,
+    "trailingComma": "all"
+  },
+  "exports": {
+    "./*.js": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    },
+    "./brands/*.js": {
+      "types": "./dist/brands/*.d.ts",
+      "import": "./dist/brands/*.js"
+    }
+  },
+  "files": [
+    "dist"
+  ]
+}
