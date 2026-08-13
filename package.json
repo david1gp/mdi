@@ -1,6 +1,6 @@
 {
   "name": "@adaptive-ds/mdi",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Material Design Icons as one ESM file per path string. Import only the icons you use — no barrel, no CJS, no extra runtime deps.",
   "keywords": [
     "mdi",
