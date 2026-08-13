@@ -114,9 +114,7 @@ import { mdiRobotOutline } from "@adaptive-ds/mdi/mdiRobotOutline.js"
 
 ## License
 
-Icon path data: [Pictogrammers Free License](https://pictogrammers.com/) / Apache-2.0 (Material Design Icons).
-
-Packaging: MIT.
+[Apache-2.0](LICENSE). Icon path data is from [Pictogrammers / Material Design Icons](https://pictogrammers.com/), also Apache-2.0.
 
 ## Acknowledgments
 
