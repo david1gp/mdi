@@ -1,16 +1,16 @@
 # @adaptive-ds/mdi
 
-Material Design Icons as one ESM file per path string. Import only the icons you use — nothing else ships into your bundle.
+Framework-agnostic Material Design Icons as typed SVG path strings. Import each icon from its own zero-dependency ESM module and render it with any SVG component.
 
-Typical MDI JS packages ship 7,400+ icons as one 2.8 MB file. Bundlers can tree-shake that, but TypeScript, install size, and CommonJS still pay for every icon.
+Bring your own SVG component so your framework controls the markup, styling, sizing, and accessibility.
 
-- **One file per icon** – `@adaptive-ds/mdi/mdiAccount.js`
-- **No barrel** – there is no `from "@adaptive-ds/mdi"`. Always import a subpath.
-- **ESM only** – no CommonJS, no UMD
-- **Zero runtime deps** – each file is a path string constant
-- **Typed as `const`** – one `.d.ts` per icon
-
-Same names and path strings as [`@mdi/js`](https://www.npmjs.com/package/@mdi/js). Render the SVG yourself.
+- **Framework agnostic** – use the path strings with React, Vue, Solid, Svelte, or your own renderer
+- **One ESM module per icon** – import `@adaptive-ds/mdi/mdiAccount.js` directly, with no barrel
+- **Rendering stays yours** – compose icons with your existing components and design system
+- **Modern packaging** – ESM-only explicit subpath exports marked as side-effect free
+- **Typed as `const`** – every icon includes its own `.d.ts`
+- **Zero runtime dependencies** – each module exports only an SVG path string
+- **Easy migration from `@mdi/js`** – icon names and path data match `@mdi/js@7.4.47`
 
 Quick Links
 
