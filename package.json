@@ -33,7 +33,7 @@
     "test": "bun test",
     "test:w": "bun test --watch",
     "build": "rm -rf ./dist && bun run generate && tsc -p ./tsconfig.lib.json",
-    "tsc": "tsc --noEmit",
+    "tsc": "bun check",
     "release": "bash ./ops/release.sh",
     "deploy": "bash ./ops/deploy.sh",
     "format": "biome format --write ops test package.json tsconfig.json tsconfig.lib.json biome.json README.md",
