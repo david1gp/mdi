@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test"
-import packageJson from "../package.json"
+import packageJson from "../package.json" with { type: "json" }
 
 test("package has no barrel export", () => {
   const exports = packageJson.exports as Record<string, unknown>
